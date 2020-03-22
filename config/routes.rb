@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'start_pages/home'
-  get 'start_pages/help'
-  get 'start_pages/about'
-  get 'start_pages/contact'
+  get '/signup', to: 'users#new'
+
+  get  '/help',    to: 'start_pages#help'
+  get  '/about',   to: 'start_pages#about'
+  get  '/contact', to: 'start_pages#contact'
   
   root 'start_pages#home'
 

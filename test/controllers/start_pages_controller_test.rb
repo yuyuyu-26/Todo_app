@@ -11,25 +11,25 @@ class StartPagesControllerTest < ActionDispatch::IntegrationTest
   end
   
   test "should get home" do
-    get start_pages_home_url
+    get root_path
     assert_response :success
     assert_select "title", "#{@base_title}"
   end
 
   test "should get help" do
-    get start_pages_help_url
+    get help_path
     assert_response :success
     assert_select "title", "ヘルプ | #{@base_title}"
   end
   
   test "should get about" do
-    get start_pages_about_url
+    get about_path
     assert_response :success
     assert_select "title", "概要 | #{@base_title}"
   end
   
   test "should get contact" do
-    get start_pages_contact_url
+    get contact_path
     assert_response :success
     assert_select "title", "お問い合わせ | #{@base_title}"
   end

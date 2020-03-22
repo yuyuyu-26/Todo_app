@@ -1,0 +1,166 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+  margin-bottom: 10px;
+  }
+}
+
+
+.jumbotron {
+  background-image: url(homes.png);
+  background-size: cover;
+} 
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  &:hover {
+  color: #fff;
+  text-decoration: none;
+  }
+}
+
+#logo::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+#logo:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.header-right a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.header-right a::after {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+.header-right a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+footer a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+footer a::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: black;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
+}
+footer a:hover::after {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
