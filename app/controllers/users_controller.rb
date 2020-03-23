@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :correct_user,   only: [:edit, :update]
+  
   def new
     @user = User.new
   end
@@ -13,8 +17,22 @@ class UsersController < ApplicationController
       log_in @user
       flash[:success] = "ようこそ"
       redirect_to @user #redirect_to user_url(@user.id)　オブジェクトを一意に表す値(id)を取得しようとする
-    else
+    else                    
       render "new"
+    end
+  end
+  
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "編集に成功しました"
+      redirect_to @user
+    else
+      render 'edit'
     end
   end
   
@@ -25,4 +43,21 @@ class UsersController < ApplicationController
       def user_params
         params.require(:user).permit(:name, :email, :password, :password_confirmation)
       end
+      
+      # beforeアクション
+
+    # ログイン済みユーザーかどうか確認
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "ログインしてください"
+        redirect_to login_url
+      end
+    end
+    
+    # 正しいユーザーかどうか確認
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
+    end
 end
