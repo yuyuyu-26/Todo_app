@@ -69,4 +69,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?('')
   end
   
+  test "associated tasks should be destroyed" do
+    @user.save
+    @user.tasks.create!(content: "study rails", state: "doing", limit_date: Time.parse("2020/03/01 12:00"))
+    assert_difference 'Task.count', -1 do
+      @user.destroy
+    end
+  end
+  
 end

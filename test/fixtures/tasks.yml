@@ -1,0 +1,16 @@
+#require "time"
+orange:
+  content: "I just ate an orange!"
+  limit_date: <%= Time.parse("2020/03/01 12:00") %> 
+
+tau_manifesto:
+  content: "Check out the @tauday site by @mhartl: http://tauday.com"
+  limit_date: <%= Time.parse("2020/03/02 12:00") %>
+
+cat_video:
+  content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
+  limit_date: <%= Time.parse("2020/03/03 12:00") %>
+
+most_old:
+  content: "Writing a short test"
+  limit_date: <%= Time.parse("2020/02/01 12:00") %>
