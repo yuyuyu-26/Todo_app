@@ -1,16 +1,36 @@
 #require "time"
 orange:
+  state: "doing"
   content: "I just ate an orange!"
   limit_date: <%= Time.parse("2020/03/01 12:00") %> 
+  user: michael
 
 tau_manifesto:
+  state: "doing"
   content: "Check out the @tauday site by @mhartl: http://tauday.com"
   limit_date: <%= Time.parse("2020/03/02 12:00") %>
+  user: michael
 
 cat_video:
+  state: "doing"
   content: "Sad cats are sad: http://youtu.be/PKffm2uI4dk"
   limit_date: <%= Time.parse("2020/03/03 12:00") %>
+  user: michael
 
 most_old:
+  state: "doing"
   content: "Writing a short test"
   limit_date: <%= Time.parse("2020/02/01 12:00") %>
+  user: michael
+  
+apple:
+  state: "doing"
+  content: "Stay night"
+  limit_date: <%= Time.parse("2020/02/03 12:00") %>
+  user: michael
+  
+painapo:
+  state: "doing"
+  content: "Zero"
+  limit_date: <%= Time.parse("2020/02/04 12:00") %>
+  user: michael
