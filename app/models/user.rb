@@ -69,6 +69,10 @@ class User < ApplicationRecord
   def following?(other_user)
     followings.include?(other_user)
   end
-
+  
+  def self.search(search)
+    return User.none unless search
+    Post.where(['content LIKE ?', "%#{search}%"])
+  end
 
 end
