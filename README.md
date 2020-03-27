@@ -1,24 +1,18 @@
-# README
+# todoアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##　機能
+・ユーザー登録
+・ユーザー検索
+・ユーザー編集
+・フォロー機能
+・todo作成/削除
+・todo一覧表示(自分のみ/自分+相互フォローユーザー)
+・他ユーザーからのtodo閲覧制御
+・ページネーション
+・ログイン/ログアウト
+・テスト実装(8割方終了)
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 実装予定
+・ユーザーの画像設定機能
+・テスト実装
