@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     #@tasks  = Task.order('limit_date').all
-    @tasks = @user.tasks.paginate(page: params[:page],per_page: 5)
-    @status = ['todo', 'doing', 'done']
+    @tasks = @user.tasks.paginate(page: params[:page],per_page: 20)
+    @status = ['予定', '実施中', '実施済']
   end
   
   def create

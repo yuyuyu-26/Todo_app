@@ -1,12 +1,12 @@
 <%= form_for(@task) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.select :state, [["予定","todo"],["実行中","doing"],["実施済","done"]],
-    { include_blank: false, selected: "todo" },{class: 'form-control'} %>
+    <%= f.select :state,  [["予定","予定"],["実施中","実施中"],["実施済","実施済"]],
+    { include_blank: false,  selected: "予定" },{class: 'form-control'} %>
     
-    <%= f.text_area :content, placeholder: "Compose new micropost...", class: 'form-control' %>
+    <%= f.text_area :content, placeholder: "タスク内容を記入して下さい", class: 'form-control' %>
     
-    <%= f.datetime_select :limit_date, {}, class: 'form-control' %>
+    <%= f.datetime_select :limit_date, {use_month_numbers: true}, class: 'form-control' %>
 
    
   </div>

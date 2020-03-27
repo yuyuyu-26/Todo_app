@@ -15,14 +15,10 @@
     <%= render 'follow_form' if logged_in? %>
     <!--%= render "form" %-->
     <% if @user.following?(current_user) && current_user.following?(@user) %>
-      <ol class="tasks">
-        <%= render @tasks %>
-      </ol>
+      <%= render 'shared/show_tasks' %>
       <%= will_paginate @tasks %>
     <% else @user == current_user %>
-      <ol class="tasks">
-        <%= render @tasks %>
-      </ol>
+      <%= render 'shared/show_tasks' %>
       <%= will_paginate @tasks %>
     <% end %>
   </div>

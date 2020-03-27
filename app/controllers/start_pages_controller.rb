@@ -4,7 +4,7 @@ class StartPagesController < ApplicationController
       #@tasks = current_user.tasks.paginate(page: params[:page])
       @tasks  = Task.order('limit_date').all
       @task = current_user.tasks.build
-      @feed_items = current_user.feed.paginate(page: params[:page],per_page: 5)
+      @feed_items = current_user.feed.paginate(page: params[:page],per_page: 20)
     end
   end
 

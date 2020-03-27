@@ -1,24 +1,12 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th>State</th>
-      <th>Content</th>
-      <th>Limit</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><%= task.state %></td>
-      <td><%= task.content %></td>
-      <td><%= task.limit_date %></td>
-      <td>
-        <% if current_user?(task.user) %>
-         <%= link_to "delete", task, method: :delete,
-                                       data: { confirm: "削除しますか?" } %>
-        <% end %>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<tr>
+  <td><%= task.state %></td>
+  <td><%= task.content %></td>
+  <td><%= task.limit_date.strftime("%Y-%m-%d %H:%M:%S") %></td>
+  <td><%= task.user.name %></td>
+  <td>
+    <% if current_user?(task.user) %>
+      <%= link_to "削除", task, method: :delete,
+                                         data: { confirm: "削除しますか?" } %>
+    <% end %>
+  </td>
+</tr>
