@@ -39,10 +39,7 @@ textarea {
 }
 
 
-.jumbotron {
-  background-image: url(homes.png);
-  background-size: cover;
-} 
+
 
 /* typography */
 
@@ -298,4 +295,10 @@ input {
 
 ul {
   list-style: none;
+}
+
+.jumbotron {
+  background-image: url("sea.png");
+  background-size: cover;
+  background-position: center 60%;
 }
